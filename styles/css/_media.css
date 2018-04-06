@@ -1,0 +1,18 @@
+@media (max-width: 1100px) {
+  .main-wrapper {
+    padding-bottom: 863px; }
+  .main-footer {
+    height: 863px;
+    margin-top: -863px; }
+    .main-footer .f-item {
+      max-width: 50%; }
+    .main-footer .latest-posts {
+      margin-bottom: 29px; }
+    .main-footer .our-services {
+      margin-left: 0; }
+    .main-footer .contact-form .input-wrap {
+      display: inline-block;
+      width: 49%; }
+    .main-footer .contact-form textarea {
+      width: 100%;
+      max-width: none; } }
