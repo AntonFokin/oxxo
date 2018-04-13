@@ -2,6 +2,12 @@
 	.main-wrapper{
 		padding-bottom: 863px;
 	}
+	#team-section{
+		.team-item{
+			width: 50%;
+			margin-bottom: 50px;
+		}
+	}
 	#main-footer{
 		height: 863px;
 		margin-top: -863px;
@@ -34,6 +40,11 @@
 	.main-wrapper{
 		padding-bottom: 1063px;
 	}
+	#amazing-section{
+		.grid-item{
+			width: 50%;
+		}
+	}
 	#main-footer{
 		height: 1063px;
 		margin-top: -1063px;
@@ -60,6 +71,28 @@
 @media(max-width: 668px){
 	.main-wrapper{
 		padding-bottom: 1963px;
+	}
+	#amazing-section{
+		.header-group{
+			margin-bottom: 30px;
+		}
+		.grid-item{
+			width: 100%;
+			text-align: center;
+			i{
+				float: none;
+				margin-bottom: 20px;
+			}
+			.text-group{
+				margin-left: 0;
+			}
+		}
+	}
+	#team-section{
+		.team-item{
+			width: 100%;
+			margin-bottom: 50px;
+		}
 	}
 	#main-footer{
 		height: 1963px;
