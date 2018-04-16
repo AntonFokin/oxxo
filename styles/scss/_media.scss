@@ -1,3 +1,28 @@
+@media(max-width: 1140px){
+	.main-nav {
+		li.item-logo {
+			display: none;
+		}
+		.adaptive-logo {
+			display: block;
+		}
+		.morphing-menu{
+			display: block;
+		}
+	}
+	.nav-bar{
+		position: absolute;
+		top: -700%;
+		background-color: $grey;
+		//top: 100%;
+		right: 0;
+		padding: 10px 50px;
+		transition: top 0.4s ease;
+		.main-nav-list-item{
+			display: block;
+		}
+	}
+}
 @media(max-width: 1100px){
 	.main-wrapper{
 		padding-bottom: 863px;
@@ -6,6 +31,27 @@
 		.team-item{
 			width: 50%;
 			margin-bottom: 50px;
+		}
+	}
+	#about-us-section{
+		text-align: center;
+		.header-group{
+			margin-bottom: 30px;
+		}
+		.about-us-slick-carousel{
+			float: none;
+			margin: 0 auto 40px;
+		}
+		.about-us-content{
+			padding-left: 0;
+		}
+		h3::after{
+			display: none;
+		}
+	}
+	#portfolio-section{
+		.portfolio-item{
+			max-width: 50%;
 		}
 	}
 	#main-footer{
@@ -40,9 +86,45 @@
 	.main-wrapper{
 		padding-bottom: 1063px;
 	}
+	#top-slick-carousel-section{
+		h2{
+			font-size: 52px;
+		}
+		.field-list{
+			li{
+				font-size: 14px;
+			}
+		}
+		.banner-btn{
+			a{
+				padding: 15px 25px;
+			}
+		}
+	}
 	#amazing-section{
 		.grid-item{
 			width: 50%;
+		}
+	}
+	#responsive-powerful-section{
+		padding-bottom: 50px;
+		.pc-wrap{
+			text-align: center;
+			float: none;
+			width: auto;
+			margin-bottom: 40px;
+		}
+		.info-content{
+			text-align: center;
+			width: auto;
+			padding-left: 0;
+		}
+		.img-wrap{
+			float: none;
+			margin: 0 auto 10px;
+		}
+		.text-wrap{
+			margin-left: 0;
 		}
 	}
 	#main-footer{
@@ -72,6 +154,37 @@
 	.main-wrapper{
 		padding-bottom: 1963px;
 	}
+	#top-slick-carousel-section{
+		.slick-arrow{
+			top: auto;
+			bottom: 0;
+		}
+		.banner-btn{
+			display: block;
+			margin: 0 auto;
+			a{
+				padding: 15px 25px;
+			}
+		}
+		.field-list{
+			display: inline-block;
+			li{
+				font-size: 10px;
+				margin-right: 1px;
+			}
+		}
+		.even-slide{
+			.info-wrap{
+				margin: 0 auto;
+			}
+			.banner-btn + .banner-btn{
+				margin: 0 auto 40px;
+			}
+			.banner-btn{
+				margin-bottom: 40px;
+			}
+		}
+	}
 	#amazing-section{
 		.header-group{
 			margin-bottom: 30px;
@@ -92,6 +205,11 @@
 		.team-item{
 			width: 100%;
 			margin-bottom: 50px;
+		}
+	}
+	#portfolio-section{
+		.portfolio-item{
+			max-width: 100%;
 		}
 	}
 	#main-footer{
@@ -122,8 +240,38 @@
 	}
 }
 @media(max-width: 420px){
+	#top-slick-carousel-section {
+		h2 {
+			font-size: 45px;
+		}
+	}
+	.nav-bar{
+		width: 100%;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+	}
 	.main-wrapper{
 		padding-bottom: 2163px;
+	}
+	#about-us-section{
+		.about-us-btn{
+			display: block;
+			margin: 0  0 20px;
+		}
+	}
+	#buy-now-section{
+		.common-buttons-wrap{
+			text-align: center;
+			span:first-child{
+				margin-right: 0;
+			}
+		}
+		.common-btn{
+			display: block;
+			margin-bottom: 20px;
+		}
 	}
 	#main-footer{
 		height: 2163px;

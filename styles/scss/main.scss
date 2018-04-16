@@ -136,10 +136,79 @@
 		color: $orange;
 	}
 }
+.morphing-menu{
+	position: relative;
+	float: right;
+	top: 7px;
+	right: 40px;
+	width: 51px;
+	height: 50px;
+	cursor: pointer;
+	background-color: transparent;
+	border: none;
+	transition: opacity 0.2s linear;
+	&:focus{
+		outline: none;
+	}
+	span{
+		display: block;
+		float: left;
+		clear: both;
+		height: 4px;
+		width: 40px;
+		border-radius: 40px;
+		background-color: $orange;
+		position: absolute;
+		right: 5px;
+		top: 0;
+		transition: all 0.4s ease;
+		margin-top: 25px;
+		&::before,&::after{
+			content: '';
+			display: block;
+			float: left;
+			clear: both;
+			height: 4px;
+			width: 40px;
+			border-radius: 40px;
+			background-color: $orange;
+			position: absolute;
+			right: 0;
+			top: -25px;
+			transition: all 0.4s ease;
+		}
+		&::before{
+			margin-top: 10px;
+		}
+		&::after{
+			margin-top: 40px;
+		}
+		&:hover{
+			opacity: 0.8;
+		}
+
+	}
+}
+.button-animation{
+	span{
+		transition: opacity 0s linear;
+		background-color: transparent;
+		z-index: 100;
+	}
+	span::before, span::after{
+		background-color: $orange;
+	}
+	span::before{
+		transform: rotate(45deg) translateY(12px) translateX(12px);
+	}
+	span::after{
+		transform: rotate(-45deg) translateY(-10px) translateX(10px);
+	}
+}
 //END COMMON STYLES
 
 //MAIN-NAV-START
-#main-nav{
+.main-nav{
 	position: absolute;
 	top: 34px;
 	left: 0;
@@ -148,6 +217,14 @@
 	.nav-list{
 		@extend .clearfix;
 		text-align: center;
+	}
+	.adaptive-logo{
+		float: left;
+		display: none;
+		margin-left: 30px;
+	}
+	.morphing-menu{
+		display: none;
 	}
 	.main-nav-list-item{
 		display: inline-block;
@@ -247,6 +324,33 @@
 		right: -92%;
 	}
 }
+.fixed-nav{
+	position: fixed;
+	top: 0;
+	background-color: #fff;
+	padding:19px 0 16px;
+	box-shadow: 0 0 4px #000;
+	.main-nav-list-item, .logo{
+		a{
+			color: #343434;
+		}
+	}
+	.item-logo{
+		border: 1px solid #343434;
+		a{
+			padding: 5px 15px;
+		}
+		h1{
+			font-size: 38px;
+		}
+		span{
+			color: $orange;
+		}
+	}
+}
+.opened{
+	top: 100% !important;
+}
 //MAIN-NAV-END
 
 //SLIDER-START
@@ -316,12 +420,14 @@
 		display: inline-block;
 		border: 1px solid #fff;
 		background-color: transparent;
-		width: 187px;
 		transition: all 0.2s ease;
+		max-width: 187px;
 		a{
 			text-transform: uppercase;
 			display: block;
-			padding: 22px 0;
+			padding: 20px 35px;
+			width: 100%;
+			max-width: 187px;
 		}
 	}
 	.banner-btn:hover{
