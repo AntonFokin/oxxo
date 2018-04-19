@@ -14,12 +14,28 @@
 		position: absolute;
 		top: -700%;
 		background-color: $grey;
-		//top: 100%;
 		right: 0;
-		padding: 10px 50px;
+		padding: 10px 0;
 		transition: top 0.4s ease;
 		.main-nav-list-item{
 			display: block;
+			a{
+				padding: 14px 66px 14px 69px;
+			}
+		}
+		.services-item:hover{
+			.dropdown-services-wrap{
+				left: -156px;
+				right: 0;
+			}
+		}
+		.services-list-submenu:hover{
+			.dropdown-ipsum-list{
+				background-color: #5c5c5c;
+				right: 0;
+				bottom: 48px;
+				top: auto;
+			}
 		}
 	}
 }
@@ -240,9 +256,28 @@
 	}
 }
 @media(max-width: 420px){
+	.header-group{
+		h2{
+			font-size: 30px;
+		}
+	}
+	.main-nav{
+		top: 8px;
+		padding: 6px 0 6px;
+	}
+	.fixed-nav{
+		top: 0;
+	}
 	#top-slick-carousel-section {
 		h2 {
 			font-size: 45px;
+			padding: 0 5px;
+		}
+		.slick-arrow{
+			height: 40px;
+			img{
+				max-height: 100%;
+			}
 		}
 	}
 	.nav-bar{
@@ -256,12 +291,23 @@
 		padding-bottom: 2163px;
 	}
 	#about-us-section{
+		padding: 35px 0 30px;
 		.about-us-btn{
 			display: block;
 			margin: 0  0 20px;
 		}
 	}
+	#amazing-section{
+		padding: 40px 0 30px;
+	}
+	#team-section{
+		padding: 40px 0 17px;
+		.team-grid{
+			margin-bottom: 0;
+		}
+	}
 	#buy-now-section{
+		padding: 50px 0 30px;
 		.common-buttons-wrap{
 			text-align: center;
 			span:first-child{
@@ -271,6 +317,11 @@
 		.common-btn{
 			display: block;
 			margin-bottom: 20px;
+		}
+	}
+	#our-client-section{
+		.slide{
+			padding: 30px 0 80px;
 		}
 	}
 	#main-footer{
